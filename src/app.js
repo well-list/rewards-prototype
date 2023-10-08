@@ -70,8 +70,8 @@ export function handleRewardsScreenExit() {
 export function handleMonthChange(isNext) {
     const ANIMATION_DURATION_MS = 375;
     const rewardsCanvasContainer = document.getElementById('rewards-canvas-container');
-    if(isNext) rewardsCanvasContainer.style.animation = `rewards-view-slide-out-right ${ANIMATION_DURATION_MS}ms ease-out 0s 1 forwards`;
-    else rewardsCanvasContainer.style.animation = `rewards-view-slide-out-left ${ANIMATION_DURATION_MS}ms ease-out 0s 1 forwards`;
+    if(isNext) rewardsCanvasContainer.style.animation = `rewards-view-slide-out-left ${ANIMATION_DURATION_MS}ms ease-out 0s 1 forwards`;
+    else rewardsCanvasContainer.style.animation = `rewards-view-slide-out-right ${ANIMATION_DURATION_MS}ms ease-out 0s 1 forwards`;
     // wait until canvases have left the screen to update their content
     setTimeout(() => {
         resetViews();
@@ -81,8 +81,8 @@ export function handleMonthChange(isNext) {
         // wait a bit for updates to draw then display again
         setTimeout(() => {
             rewardsCanvasContainer.style.animation = '';
-            if(isNext) rewardsCanvasContainer.style.animation = `rewards-view-slide-in-left ${ANIMATION_DURATION_MS}ms ease-in-out 0s 1 forwards`;
-            else rewardsCanvasContainer.style.animation = `rewards-view-slide-in-right ${ANIMATION_DURATION_MS}ms ease-in-out 0s 1 forwards`;
+            if(isNext) rewardsCanvasContainer.style.animation = `rewards-view-slide-in-right ${ANIMATION_DURATION_MS}ms ease-in-out 0s 1 forwards`;
+            else rewardsCanvasContainer.style.animation = `rewards-view-slide-in-left ${ANIMATION_DURATION_MS}ms ease-in-out 0s 1 forwards`;
             setTimeout(() => { rewardsCanvasContainer.style.animation = ''; }, ANIMATION_DURATION_MS); // clear animation
         }, ANIMATION_DURATION_MS / 2);
     }, ANIMATION_DURATION_MS);
