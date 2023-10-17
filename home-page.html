@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well-List UI Prototype</title>
+    <script type="module" src="views/rewards/src/app.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="views/rewards/css/app.css">
+    <link rel="stylesheet" type="text/css" href="views/rewards/css/reward-views.css">
+</head>
+<body>
+    <main>
+        <div id="title-banner">Well-List Rewards Prototype</div>
+        <div id="menu">
+            <div id="start-option" class="menu-option">Start</div>
+            <div id="save-option" class="menu-option">Save Existing</div>
+            <div id="load-option" class="menu-option">
+                <input type="file" id="fileInput" accept=".json" style="display: none;">
+                <label for="fileInput" id="load-option-label">Load Existing</label>
+              </div>
+        </div>
+    </main>
+    <div id="rewards-view-container" style="display: none;">
+        <div id="rewards-canvas-container">
+            <div id = "rewards-left-menu" class="left-menu">
+                <canvas id="rewards-left-menu-ui" class="canvas-layer left-menu"></canvas>
+                <canvas id="rewards-left-menu-background" class="canvas-layer left-menu"></canvas>
+            </div>
+            <div id = "rewards-main-view" class="main-view">
+                <canvas id="rewards-main-view-ui" class="canvas-layer main-view"></canvas>
+                <canvas id="rewards-main-view-hover" class="canvas-layer main-view"></canvas>
+                <canvas id="rewards-main-view-vined-pathos" class="canvas-layer main-view"></canvas>
+                <canvas id="rewards-main-view-plants"  class="canvas-layer main-view"></canvas>
+                <canvas id="rewards-main-view-background" class="canvas-layer main-view"></canvas>
+            </div>
+            <div id = "rewards-right-menu" class="right-menu">
+                <canvas id="rewards-right-menu-ui" class="canvas-layer right-menu"></canvas>
+                <canvas id="rewards-right-menu-text" class="canvas-layer right-menu"></canvas>
+                <canvas id="rewards-right-menu-background" class="canvas-layer right-menu"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
